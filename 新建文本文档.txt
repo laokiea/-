@@ -1,0 +1,47 @@
+// var page = {
+//       page : 2,
+//       url : '',
+//             need_more : '1',
+//       getData : function(is_pullload){
+//         $.ajax({
+//           url : this.url+this.page,
+//           method : 'get',
+//           dataType : 'json',
+//           success : function(s) {
+//               var data = s.Variables.data.tabs,
+//               html = $('.my_list').html();
+//               for(var i=0; i<data.length;i++) {
+//                   html +=
+//                   "<a href='/tab/"+data[i]['tid']+"/'><li class='item'><img src="+data[i]['icon']+"><div class='item-attr'><p>"+data[i]['subject']+"</p><p>"+data[i]['forumname']+"</p></div></li></a>";
+//               }
+//                             if(is_pullload) $('.coll_loading:first').hide();
+//                             $('.my_list').html(html);
+//                             page.page++;
+//                             page.need_more = s.Variables.data.need_more;
+//           }
+//         });
+//       },
+//             pullload : function(){
+//                 if ($(document).scrollTop() >= $(document).height() - $(window).height() && this.need_more == '1') {
+//             $('.coll_loading:first').show();
+//             this.getData(true);
+//         }
+//             },
+//   };
+  // page.url = '/api/mobile/iyz_index.php?version=4&android=1&iyzversion=4&module=mythread3&iyzmobile=1&ttype=tab&uid={$_G[uid]}&page=';
+  // page.getData(false);
+  // $(document).scroll(function(e){
+  //   var cls = e.target;
+  //       cls.isScrolling = true;
+  //       if (cls.scroll_interval) { return; }
+  //       cls.scroll_interval = setInterval(function () {
+  //           if (cls.isScrolling) {
+  //               cls.isScrolling = false;
+  //           }
+  //           else {
+  //               clearInterval(cls.scroll_interval);
+  //               page.pullload();
+  //               cls.scroll_interval = 0;
+  //           }
+  //       }.bind(this), 200);
+  // });

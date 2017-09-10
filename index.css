@@ -1,0 +1,28 @@
+html,body{width: 100%;font-size: 16px;min-width: 375px;}
+.sama_btn_default {border: none;background: #fff;}
+
+.sama_topback {height: 30px;background: url("top_back.png") repeat-x;}
+
+.sama_navbar {display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-between;background: #fff;padding-top: 50px;}
+.sama_nav_item {display: inline-block;flex-basis: 20%;}
+.item_left > a{float: right;}
+.item_left > a > img{min-height: 58px;}
+.item-right {text-align: center;}
+.item-right > .menu i{font-size: 40px;border: 1px solid #666;padding: 8px;color: #999;border-radius: 100px;animation: 2s menu_breath infinite;}
+
+@keyframes menu_breath {
+	0% {border-color: #fff;}
+	50% {border-color: #333;}
+	100% {border-color: #fff;}
+}
+
+.sama_header {background: #fff;text-align: center;padding-top: 40px;}
+.sama_header h2,h3,h4 {line-height: 35px;}
+.sama_header h4 {color: #666;}
+.sama_list > ul {display: flex;flex-flow: row wrap;justify-content: space-between;list-style: none;min-width: 375px;width:25%;margin: 0 auto;}
+.sama_list > ul > li{flex-basis: 50%;text-align: left;color: #666;font-weight: 100;margin-top: 10px;font-size: 15px;}
+.sama_list > ul > li i{margin-right: 10px;font-size: 20px;color: #777;}
+
+@media screen and (max-width: 1655px){
+	.sama_list > ul > li{flex-basis: 100%;text-indent: 20%;}
+} 
