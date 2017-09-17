@@ -29,17 +29,17 @@ html,body{width: 100%;font-size: 16px;min-width: 375px;}
 	.sama_list > ul > li{flex-basis: 100%;text-indent: 20%;}
 } 
  
-.sama_photo {background: #fff;width: 50%;margin: 0 auto;padding-top: 50px;}
+.sama_photo {background: #fff;width: 60%;margin: 0 auto;padding-top: 50px;}
 .sama_part {margin-bottom: 50px;}
 .sama_photo > .sama_part > .title_1{border: 1px solid #666;}
 .sama_photo > .sama_part > .title_2{border: 1px solid #999;margin-top: -45px;margin-left: 4px;line-height: 45px;text-align: center;font-size: 14px;}
 .sama_photo > .sama_part > .sama_titlelist{width: 100px;height: 50px;background: #fff;}
 
 .photo_list{margin-top: -8px;margin-left: 18px;}
-.photo_list ul {display: flex;flex-flow: row wrap;justify-content: center;list-style: none;padding-left: 0;}
-.photo_list ul li{margin-bottom: 0px;margin-left: 10px;}
+.photo_list ul {display: flex;flex-flow: row wrap;justify-content: flex-start;list-style: none;padding-left: 0;}
+.photo_list ul li{margin-bottom: 5px;margin-left: 10px;margin-right: 5px;}
 .photo_list ul li p{color: #999;box-shadow: 0 1px 2px rgba(0,0,0,.2);padding: 10px 20px;overflow: hidden;}
-.photo_list ul li img{width: 100%;max-width: 300px;}
+.photo_list ul li img{width: 100%;max-width: 250px;}
 
 .sama_return_top{width: 40px;height: 40px;background-color: #fff;border-radius: 100px;position: fixed;
     right: 100px;
