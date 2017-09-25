@@ -8,7 +8,7 @@ html,body{width: 100%;font-size: 16px;min-width: 375px;}
 .item_left > a{float: right;}
 .item_left > a > img{min-height: 58px;}
 .item-right {text-align: center;}
-.item-right > .menu i{font-size: 40px;border: 1px solid #666;padding: 8px;color: #999;border-radius: 100px;animation: 2s menu_breath infinite;}
+.item-right > .menu i{font-size: 40px;border: 1px solid #666;padding: 8px;color: #999;border-radius: 100px;animation: 2s menu_breath infinite;cursor: pointer;}
 
 /*动画效果 0%表示开始，50%表示一半的时候，100%表示结束时，效果是border-color(边框颜色)由#fff变成#333再变成#fff，从而实现了一个呼吸的效果*/
 @keyframes menu_breath {
@@ -16,6 +16,9 @@ html,body{width: 100%;font-size: 16px;min-width: 375px;}
 	50% {border-color: #333;}
 	100% {border-color: #fff;}
 }
+
+.sama_body{position: relative;}
+.sama_avatar img{width: 120px;height: 120px;border: 1px solid rgba(0,0,0,0.15);border-radius: 400px;}
 
 .sama_header {background: #fff;text-align: center;padding-top: 50px;padding-bottom: 20px;}
 .sama_header h2,h3,h4 {line-height: 35px;}
@@ -37,9 +40,9 @@ html,body{width: 100%;font-size: 16px;min-width: 375px;}
 
 .photo_list{margin-top: -8px;margin-left: 18px;}
 .photo_list ul {display: flex;flex-flow: row wrap;justify-content: flex-start;list-style: none;padding-left: 0;}
-.photo_list ul li{margin-bottom: 5px;margin-left: 10px;margin-right: 5px;}
-.photo_list ul li p{color: #999;box-shadow: 0 1px 2px rgba(0,0,0,.2);padding: 10px 20px;overflow: hidden;}
-.photo_list ul li img{width: 100%;max-width: 250px;}
+.photo_list ul li{margin-bottom: 10px;margin-left: 10px;margin-right: 10px;}
+.photo_list ul li p{color: #333;box-shadow: 0 1px 2px rgba(0,0,0,.2);padding: 15px 20px;overflow: hidden;font-size: 14px;font-weight: 500;}
+.photo_list ul li img{width: 100%;max-width: 250px;box-shadow: 0px 0px 10px #999;}
 
 .sama_return_top{width: 40px;height: 40px;background-color: #fff;border-radius: 100px;position: fixed;
     right: 100px;
@@ -51,6 +54,8 @@ html,body{width: 100%;font-size: 16px;min-width: 375px;}
 }
 .sama_return_top span i{font-size: 25px;margin-left: 7px;}
 
+.sama_menu {height: 200px;position: absolute;top: 0;right: 0;width: 20%;border:1px solid #999;display: none;}
+
 /*// 媒体查询 ，意思就是说当s对象是screen(屏幕)的max-width(最大宽度)为900px的时候，去更改下列样式*/
 @media screen and (max-width: 900px){
 	.sama_photo > .sama_part > .title_2{border: 1px solid #999;margin-top: -30px;margin-left: 4px;line-height: 30px;text-align: center;font-size: 12px;}
@@ -61,3 +66,9 @@ html,body{width: 100%;font-size: 16px;min-width: 375px;}
 	.sama_return_top{width: 30px;height: 30px;right: 18px;bottom: 30px;}
 	.sama_return_top span i{font-size: 20px;margin-left: 4px;}
 }
+
+.bottom-text{padding: 40px 0;margin-top: 120px;}
+.bottom-text p{font-size: 16px;font-weight: 500;text-align: center;margin: 0;font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;color: #666;}
+
+.sama_big{position: fixed;top: 0;left: 0;right: 0;height: 100%;width: 100%;background: rgba(0,0,0,0.85);display: none;}
+.sama_big > .sama_close {position: fixed;top: 20px;right: 0;height: 5%;width: 5%;background: rgba(0,0,0,0.85);}
