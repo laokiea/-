@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_410687_pl3slh47oqiwwmi.css"/>
+<style type="text/css">
+.sama_return_top{width: 40px;height: 40px;background-color: #fff;border-radius: 100px;position: fixed;
+    right: 100px;
+    bottom: 50px;
+    z-index: 99992;
+    opacity: 1;cursor: pointer;border: 1px solid #666;color: #999;display: none;}
+.sama_return_top:hover{
+	background-color: #666;color: #ccc;
+}
+.sama_return_top span{display: inline-block;margin-top: 5px;}
+.sama_return_top span i{font-size: 25px;}
+@media screen and (max-width: 900px){
+	.sama_return_top{width: 30px;height: 30px;right: 18px;bottom: 30px;}
+	.sama_return_top span i{font-size: 20px;margin-left: 4px;}
+}
+</style>
+</head>
+<body style="text-align:center;">
+<div class="sama_return_top">
+	<span><i class="iconfont icon-huojian"></i></span>
+</div>
+<script>
+
+		var url = localStorage.getItem('url'),
+		has = localStorage.getItem('has'),
+		img = document.createElement('img');
+		img.src=url;
+		if(has == 1) {
+			var a = document.createElement('a');
+			a.href="https://1pei.me/";
+			a.appendChild(img);
+			document.body.appendChild(a);
+		} else {
+			document.body.appendChild(img);
+		}
+
+		// 页面一滚动就会执行这个代码，术语叫 监听滚动事件
+		$(window).on('scroll', function(e){
+			// 这个是判断滚动条滚动的距离大于200的时候，让小火箭出来
+			if($(document).scrollTop() > 200) {
+				$('.sama_return_top').show();
+			// 否则就消失
+			} else {
+				$('.sama_return_top').hide();
+			}
+		});
+		// 这个点击事件 会让scrollTop这个属性变成0
+		$('.sama_return_top').on('click',function(e){
+			// scrollTo(0,0);
+			$('body').animate({scrollTop: 0},1000);
+		});
+		
+</script>
+</body>
+
+</html>
