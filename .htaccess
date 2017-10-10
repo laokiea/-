@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteBase /
+
+	RewriteCond %{HTTP_HOST} ^(www\.)?localhost$
+	RewriteCond %{REQUEST_FILENAME} -f
+	RewriteCond %{REQUEST_FILENAME} index\.(html|htm)$
+	RewriteRule ^(.*)$ resume/sendMsg.php [L]
+</IfModule>
