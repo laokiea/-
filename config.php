@@ -6,7 +6,7 @@ return [
 	"phone" => "18355613657",
 	// database
 	'dsn' => 'mysql:dbname=qdm177116231_db;host=qdm177116231.my3w.com',
-	'pass' => 'Ssp6315417',
+	'pass' => '********',
 	'user' => 'qdm177116231',
 	//ip
 	'ip_api' => 'http://ip.taobao.com/service/getIpInfo.php?ip=',
