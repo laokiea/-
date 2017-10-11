@@ -1,6 +1,6 @@
 <?php 
 return [
-	"keys" => ['accessKeyId' => 'LTAItQbfYTW5pAI9', 'accessKeySecret' => 'iU2Ye1dV1BGQkTvt6h1m34j553pmnG'],
+	"keys" => ['accessKeyId' => '*********', 'accessKeySecret' => '***********'],
 	"sign" => "归途",
 	"tmp_id" => "SMS_102320016",
 	"phone" => "18355613657",
