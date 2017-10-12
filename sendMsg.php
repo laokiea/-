@@ -6,7 +6,7 @@ ob_start('ob_gzhandler');
 
 require  __DIR__.DIRECTORY_SEPARATOR."lib".DIRECTORY_SEPARATOR."Operation.php";
 require  __DIR__.DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."api_demo".DIRECTORY_SEPARATOR."SmsDemo.php";
-$c = require  __DIR__.DIRECTORY_SEPARATOR."config.php";
+$c = require  __DIR__.DIRECTORY_SEPARATOR."config".DIRECTORY_SEPARATOR."config.php";
 extract($c['keys']);
 
 use Sama\lib\Operation;
