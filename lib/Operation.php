@@ -6,7 +6,7 @@ class Operation {
 	private $pdo_client;
 	private $ip_api;
 	private $mapping = array(
-		// "Sama\\" => "",
+		"Sama\\lib" => __DIR__,
 	);
 
 	public function __construct(){
@@ -15,6 +15,18 @@ class Operation {
 
 	public function autoload($className){
 		if($className == "Sama\\Operation") return;
+		$file = $this->parseClassName($className);
+		require $file;
+	}
+
+	public function parseClassName($className){
+		while(false !== $pos = strrpos($className, '\\')) {
+			$prefix = substr($className,0,$pos);
+			$suffix = substr($className,$pos+1);
+			if(array_key_exists($prefix, $this->mapping) && file_exists($file = $this->mapping[$prefix].DIRECTORY_SEPARATOR.$suffix.".php")) {
+				return $file;
+			}
+		}
 	}
 
 	public function initPdo($dsn, $user, $pass){
